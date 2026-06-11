@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amol Kumar | Portfolio</title>
+  <meta name="description" content="Portfolio of Amol Kumar | Web Developer & AI enthusiast" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header class="fade-up">
+      <div class="brand">
+        <div class="logo"><img src="./images/my pic.jpg" alt="Amol Kumar"></div>
+        <div>
+          <div style="font-weight:700">Amol Kumar</div>
+          <div style="font-size:12px;color:var(--muted)">&bull; Front-End Developer</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button class="toggle" id="themeToggle" type="button" title="Toggle theme" aria-label="Switch to light theme">☀️
+          Light</button>
+      </nav>
+    </header>
+
+    <section class="hero fade-up" id="home">
+      <div class="intro">
+        <div class="badge">&lt;Developer&gt; <span style="opacity:.7;margin-left:8px">Crafting elegant code</span></div>
+        <h1>Hi, I'm <span
+            style="background:linear-gradient(90deg,var(--accent1),var(--accent2));-webkit-background-clip:text;color:transparent">Amol</span>
+          - I build responsive, user-friendly websites using HTML, CSS, JavaScript, and modern web technologies.</h1>
+        <p class="lead">I make websites that feel fast, look modern, and are a joy to use. I'm currently exploring
+          full-stack web development and machine learning projects that solve real problems.</p>
+
+        <div class="cta">
+          <button class="btn btn-primary" onclick="scrollToId('projects')">View Projects</button>
+          <button class="btn btn-ghost"><a href="resume/Amol Resume.pdf" target="_blank">Download Resume</a></button>
+        </div>
+
+        <div style="margin-top:16px">
+          <div class="mini-card" style="display:inline-block">Available for internships
+          </div>
+          <div class="mini-card" style="display:inline-block">Open to collaboration
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="about" class="card fade-up card-margin">
+      <h3>About Me</h3>
+      <p class="muted">I'm a BCA student passionate about front-end development. I enjoy transforming ideas and
+        designs into responsive, interactive websites. I have experience building landing pages, portfolio websites,
+        clones, and JavaScript applications while focusing on clean code and user experience.</p>
+      <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
+      </div>
+    </div>
+    <section class="two-col">
+      <div class="card fade-up">
+        <h3>Education</h3>
+        <p class="muted bold">Bachelor of Computer Applications (BCA)</p>
+        <p class="muted">Jharkhand Rai University, Ranchi</p>
+        <p class="muted">2024-2027 (Pursuing)</p>
+        <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
+        </div>
+      </div>
+
+
+      <div class="card fade-up">
+        <h3>Skills</h3>
+        <div class="skill-card">
+          <div class="skill-mini-card">Programming Language
+            <p class="card-para">&bull; C Programming</p>
+            <p class="card-para">&bull; Java</p>
+            <p class="card-para">&bull; Python</p>
+            <p class="card-para">&bull; SQL</p>
+          </div>
+          <div class="skill-mini-card">Web Development
+            <p class="card-para">&bull; HTML5</p>
+            <p class="card-para">&bull; CSS3</p>
+            <p class="card-para">&bull; JavaScript</p>
+            <p class="card-para">&bull; React</p>
+          </div>
+          <div class="skill-mini-card">Tools Using
+            <p class="card-para">&bull; VS Code</p>
+            <p class="card-para">&bull; Git</p>
+            <p class="card-para">&bull; Github</p>
+            <p class="card-para">&bull; Codex</p>
+          </div>
+        </div>
+      </div>
+      <div class="card projects-card">
+        <h3 id="projects">Projects</h3>
+        <div class="projects" id="projectsGrid">
+          <!-- project items inserted by JS -->
+        </div>
+      </div>
+    </section>
+    <div class="card card-margin" id="contact">
+      <h3>Contact</h3>
+      <p class="muted margin-bottom">Want to work together? Contact me OR Drop a message.</p>
+      <div class="contact-section">
+        <div class="side-section">
+          <div class="link-card margin-bottom"><a href="tel:+918102450184" target="_blank"><i
+                class="fa-solid fa-phone"></i>&nbsp;&nbsp; +91 8102450184</a></div>
+          <div class="link-card margin-bottom"><a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=amolkrofficial@gmail.com" target="_blank"><i
+                class="fa-solid fa-envelope"></i>&nbsp;&nbsp; amolkrofficial@gmail.com</a></div>
+          <div class="link-card margin-bottom"><a href="https://github.com/amolkr" target="_blank"><i
+                class="fa-brands fa-github"></i>&nbsp;&nbsp; Github Profile</a></div>
+          <div class="link-card margin-bottom"><a href="https://www.linkedin.com/in/amolkr053/" target="_blank"><i
+                class="fa-brands fa-linkedin-in"></i>&nbsp;&nbsp; LinkedIn Profile</a></div>
+        </div>
+
+        <div class="contact-form">
+          <form id="contactForm" onsubmit="handleContact(event)" style="margin-top:10px">
+            <div class="row">
+              <input id="cname" type="text" placeholder="Your name" required />
+              <input id="cemail" type="email" placeholder="Your email" required />
+            </div>
+            <div style="margin-top:8px"><input id="ctitle" type="text" placeholder="Subject" required /></div>
+            <div style="margin-top:8px"><textarea id="cmsg" placeholder="Message" required></textarea></div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Send message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <span class="muted">&copy; 2025 Amol Kumar. All Rights Reserved.</span>
+    </footer>
+  </div>
+
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
