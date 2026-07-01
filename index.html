@@ -14,7 +14,7 @@
   <div class="container">
     <header class="fade-up">
       <div class="brand">
-        <div class="logo"><img src="./images/my pic.jpg" alt="Amol Kumar"></div>
+        <div class="logo"><img src="assets/my pic.jpg" alt="Amol Kumar"></div>
         <div>
           <div style="font-weight:700">Amol Kumar</div>
           <div style="font-size:12px;color:var(--muted)">&bull; Front-End Developer</div>
@@ -32,15 +32,15 @@
     <section class="hero fade-up" id="home">
       <div class="intro">
         <div class="badge">&lt;Developer&gt; <span style="opacity:.7;margin-left:8px">Crafting elegant code</span></div>
-        <h1>Hi, I'm <span
-            style="background:linear-gradient(90deg,var(--accent1),var(--accent2));-webkit-background-clip:text;color:transparent">Amol</span>
+        <h1>Hi, I'm <span class="name-style">Amol</span>
           - I build responsive, user-friendly websites using HTML, CSS, JavaScript, and modern web technologies.</h1>
         <p class="lead">I make websites that feel fast, look modern, and are a joy to use. I'm currently exploring
           full-stack web development and machine learning projects that solve real problems.</p>
 
         <div class="cta">
           <button class="btn btn-primary" onclick="scrollToId('projects')">View Projects</button>
-          <button class="btn btn-ghost"><a href="resume/Amol Resume.pdf" target="_blank">Download Resume</a></button>
+          <a href="assets/resume/Amol Resume.pdf" target="_blank"><button class="btn btn-ghost">Change
+              Resume</button></a>
         </div>
 
         <div style="margin-top:16px">
@@ -51,17 +51,17 @@
         </div>
       </div>
     </section>
-
-    <div id="about" class="card fade-up card-margin">
-      <h3>About Me</h3>
-      <p class="muted">I'm a BCA student passionate about front-end development. I enjoy transforming ideas and
-        designs into responsive, interactive websites. I have experience building landing pages, portfolio websites,
-        clones, and JavaScript applications while focusing on clean code and user experience.</p>
-      <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
-      </div>
-    </div>
     <section class="two-col">
-      <div class="card fade-up">
+      <div id="about" class="card fade-up card-margin">
+        <h3>About Me</h3>
+        <p class="muted">I'm a BCA student passionate about front-end development. I enjoy transforming ideas and
+          designs into responsive, interactive websites. I have experience building landing pages, portfolio websites,
+          clones, and JavaScript applications while focusing on clean code and user experience.</p>
+        <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
+        </div>
+      </div>
+
+      <div class="card fade-up card-margin">
         <h3>Education</h3>
         <p class="muted bold">Bachelor of Computer Applications (BCA)</p>
         <p class="muted">Jharkhand Rai University, Ranchi</p>
@@ -69,38 +69,44 @@
         <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
         </div>
       </div>
-
-
-      <div class="card fade-up">
-        <h3>Skills</h3>
-        <div class="skill-card">
-          <div class="skill-mini-card">Programming Language
-            <p class="card-para">&bull; C Programming</p>
-            <p class="card-para">&bull; Java</p>
-            <p class="card-para">&bull; Python</p>
-            <p class="card-para">&bull; SQL</p>
-          </div>
-          <div class="skill-mini-card">Web Development
-            <p class="card-para">&bull; HTML5</p>
-            <p class="card-para">&bull; CSS3</p>
-            <p class="card-para">&bull; JavaScript</p>
-            <p class="card-para">&bull; React</p>
-          </div>
-          <div class="skill-mini-card">Tools Using
-            <p class="card-para">&bull; VS Code</p>
-            <p class="card-para">&bull; Git</p>
-            <p class="card-para">&bull; Github</p>
-            <p class="card-para">&bull; Codex</p>
-          </div>
-        </div>
-      </div>
-      <div class="card projects-card">
-        <h3 id="projects">Projects</h3>
-        <div class="projects" id="projectsGrid">
-          <!-- project items inserted by JS -->
-        </div>
-      </div>
     </section>
+    <div class="card fade-up card-margin">
+      <h3>Skills</h3>
+      <div class="skill-card">
+        <div class="skill-mini-card">Programming Language
+          <p class="card-para">&bull; C Programming</p>
+          <p class="card-para">&bull; Java</p>
+          <p class="card-para">&bull; Python</p>
+          <p class="card-para">&bull; SQL</p>
+          <p class="card-para">&bull; Prolog</p>
+          <p class="card-para">&bull; Dart</p>
+        </div>
+        <div class="skill-mini-card">Web Development
+          <p class="card-para">&bull; HTML5</p>
+          <p class="card-para">&bull; CSS3</p>
+          <p class="card-para">&bull; JavaScript</p>
+          <p class="card-para">&bull; React</p>
+        </div>
+        <div class="skill-mini-card">App Development
+          <p class="card-para">&bull; Dart</p>
+          <p class="card-para">&bull; Flutter</p>
+        </div>
+        <div class="skill-mini-card">Tools Using
+          <p class="card-para">&bull; VS Code</p>
+          <p class="card-para">&bull; Android Studio</p>
+          <p class="card-para">&bull; Git</p>
+          <p class="card-para">&bull; Github</p>
+          <p class="card-para">&bull; Codex</p>
+        </div>
+      </div>
+    </div>
+    <div class="card projects-card card-margin">
+      <h3 id="projects">Projects</h3>
+      <div class="projects" id="projectsGrid">
+        <!-- project items inserted by JS -->
+      </div>
+    </div>
+
     <div class="card card-margin" id="contact">
       <h3>Contact</h3>
       <p class="muted margin-bottom">Want to work together? Contact me OR Drop a message.</p>
@@ -138,6 +144,7 @@
   </div>
 
   <div class="cursor-glow" id="cursorGlow"></div>
+
   <script src="script.js"></script>
 </body>
 
