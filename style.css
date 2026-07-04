@@ -260,6 +260,7 @@ textarea:focus {
 
 .card-para {
     font-size: 12px;
+    margin-top: 5px;
 }
 
 .card-margin {
@@ -346,8 +347,14 @@ textarea:focus {
 }
 
 .project .thumb {
-    width: 110px;
-    height: 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-container {
+    width: 150px;
+    height: 80px;
     border-radius: 10px;
     flex: 0 0 auto;
     overflow: hidden;
@@ -358,6 +365,13 @@ textarea:focus {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.project button {
+    margin-top: 10px;
+    font-size: 12px;
+    padding: 0px 10px;
+    border-radius: 8px;
 }
 
 
@@ -378,6 +392,7 @@ textarea:focus {
 /* Project modal */
 .modal-overlay {
     position: fixed;
+    overscroll-behavior: none;
     inset: 0;
     z-index: 9999;
     display: flex;
@@ -388,13 +403,14 @@ textarea:focus {
     backdrop-filter: blur(8px);
 }
 
- 
+
 .modal-card {
     display: flex;
     flex-direction: column;
     width: min(900px, 100%);
-    max-height: min(86vh, 720px);
-    overflow: auto;
+    max-height: min(90dvh, 720px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
     background: var(--card);
     color: var(--text);
     padding: 18px;
@@ -627,6 +643,11 @@ footer {
     .contact-form {
         width: 100%;
     }
+
+    .img-container {
+        width: 220px;
+        height: 110px;
+    }
 }
 
 @media (max-width: 520px) {
@@ -656,7 +677,8 @@ footer {
     }
 
     .cta .btn,
-    .form-actions .btn {
+    .form-actions .btn, 
+    .project .btn {
         width: 100%;
     }
 
@@ -706,6 +728,10 @@ footer {
 
     .side-section {
         margin-bottom: 20px;
+    }
+
+    .meta{
+        text-align: center;
     }
 }
 

@@ -36,10 +36,10 @@ const projects = [
         title: 'FontSmith',
         desc_s: 'FontSmith is an AI-powered web application that converts handwritten text into personalized digital fonts, allowing users to create, preview, and download unique handwriting styles.',
         desc_l: 'FontSmith is an AI-powered web application that transforms handwritten samples into fully functional digital fonts. Users can upload images of their handwriting, and the system analyzes character shapes, spacing, and writing patterns to generate a personalized font that closely matches their natural style. The platform provides font previews, customization options, and downloadable font files compatible with common design and word-processing software. Built using modern web technologies with AI-based image processing and font generation techniques, FontSmith demonstrates skills in full-stack web development, image analysis, API integration, and creating user-focused applications with practical real-world use cases.',
-        tag: 'Python | ML',
+        tag: 'Python | OpenCV | fontTools | React | TypeScript | Tailwind CSS | MongoDB | Node.js | FastAPI',
         link: '',
-        image: '',
-        video: ''
+        image: 'fontsmith.jpg',
+        video: 'fontsmith.mp4'
     },
     {
         title: 'FocusFlow',
@@ -47,8 +47,8 @@ const projects = [
         desc_l: 'FocusFlow is a modern full-stack productivity web application designed to help students organize their academic and personal lives in one place. It offers features such as task management, study planning, habit tracking, Pomodoro focus sessions, note-taking, calendar scheduling, reminders, and productivity analytics through a clean and responsive interface. Built using React, Node.js, Express, and MongoDB, the platform emphasizes performance, usability, and scalability. With secure authentication, real-time progress tracking, and an intuitive dashboard, FocusFlow enables students to stay organized, build consistent study habits, reduce procrastination, and achieve their academic goals more efficiently.',
         tag: 'HTML | CSS | Javascript | React | MongoDB | API',
         link: '',
-        image: '',
-        video: ''
+        image: 'focusflow.jpg',
+        video: 'focusflow.mp4'
     },
     {
         title: 'CampusVault',
@@ -95,14 +95,18 @@ projects.forEach((p) => {
     el.tabIndex = 0;
     el.setAttribute('role', 'button');
     el.setAttribute('aria-label', `Open details for ${p.title}`);
-    el.innerHTML = `<div class="thumb aria-hidden="true">
-                        <img src="/assets/project-images/${p.image}" alt="" srcset="">
+    el.innerHTML = `<div class="thumb" aria-hidden="true">
+                        <div class="img-container">
+                            <img src="/assets/project-images/${p.image}" alt="" srcset="">
+                        </div>
+                        <button class="btn btn-primary open-modal">View More</button>
                     </div>
                     <div class="meta"><strong>${p.title}</strong><small>${p.desc_s}</small>
                         <div style="margin-top:8px;font-size:12px;color:var(--muted)">${p.tag}</div>
                     </div>`;
-    el.addEventListener('click', () => openProjectModal(p));
-    el.addEventListener('keydown', (event) => {
+    const om = el.querySelector(".open-modal");
+    om.addEventListener('click', () => openProjectModal(p));
+    om.addEventListener('keydown', (event) => {
         if (event.key === 'Enter' || event.key === ' ') {
             event.preventDefault();
             openProjectModal(p);
@@ -133,21 +137,14 @@ function openProjectModal(p) {
       `;
 
     function closeModal() {
+        document.body.style.overflow = "";
         document.body.removeChild(overlay);
-        document.removeEventListener('keydown', handleEscape);
     }
 
-    function handleEscape(event) {
-        if (event.key === 'Escape') closeModal();
-    }
-
-    overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) closeModal();
-    });
     overlay.querySelector('#closeModal').addEventListener('click', closeModal);
-    document.addEventListener('keydown', handleEscape);
+    document.body.style.overflow = "hidden";
     document.body.appendChild(overlay);
-    overlay.querySelector('#closeModal').focus();
+    overlay.querySelector('#closeModal').blur();
 }
 
 // -----------------------
