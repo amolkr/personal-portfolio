@@ -24,7 +24,7 @@ A modern and responsive personal portfolio website built using HTML, CSS, and Ja
 
 ## 🔗 Live Demo
 
-https://amolkr-portfolio.netlify.app
+https://amolkumar.netlify.app/
 
 ## 📂 Sections Included
 
